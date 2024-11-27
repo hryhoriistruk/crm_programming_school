@@ -1,0 +1,35 @@
+.FormCard{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 350px;
+}
+.Input {
+    border-radius: 25px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.Button {
+    border-radius: 25px;
+    min-width: 100px;
+    background-color: rgb(253, 253, 253);
+    border: none;
+    box-shadow: rgba(255, 255, 255, 0.25) 0 0.0625em 0.0625em, rgba(255, 255, 255, 0.25) 0 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
+}
+.Button:hover{
+    color: white;
+}
+.PasswordContainer{
+    position: relative;
+}
+.PasswordContainer span{
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    color: #6c6969;
+}
+.ValidationMessage {
+    white-space: pre-line;
+    font-size: 0.9em;
+    padding: 5px;
+}

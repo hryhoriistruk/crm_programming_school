@@ -1,0 +1,169 @@
+.Table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+.Table th,
+.Table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.Table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.TableHead:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.ListItem {
+    color: #a927ba;
+}
+.ListActive {
+    color: white;
+    background-color: #a927ba;
+}
+.ListItem:hover {
+    background-color: rgba(101, 101, 101, 0.07);
+    color: #a927ba;
+    cursor: pointer;
+}
+.NavLinks {
+    display: flex;
+    justify-content: center;
+}
+.CheckBox:checked {
+    background-color: #a927ba;
+}
+.ReloadButton {
+    background-color: #a927ba;
+    color: white;
+}
+.ReloadButton:hover {
+    background-color: rgba(169, 39, 186, 0.68);
+}
+.TableRow {
+    height: 60px;
+    font-size: 1em;
+}
+.TableRow:hover {
+    background-color: rgba(169, 39, 186, 0.72);
+    color: white;
+    cursor: pointer;
+}
+.TableRowDark {
+    background-color: rgba(239, 239, 239, 0.8);
+}
+.TableRowLight {
+    background-color: #ffffff;
+}
+.ExpandedCell {
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+}
+.MainCommentsContainer {
+    width: 40%;
+    border-radius: 10px;
+}
+.CommentsContainer {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid rgba(169, 39, 186, 0.34);
+    box-shadow: rgba(169, 39, 186, 0.34) 0 1px 8px 0;
+}
+.CommentsContainer:hover {
+    cursor: pointer;
+}
+.Comment {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+.InputButtonContainer {
+    margin-top: 10px;
+    width: 100%;
+}
+.CommentInput {
+    width: 50%;
+    height: 35px;
+    background-color: rgba(169, 39, 186, 0.34);
+    border: none;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+.CommentInput::placeholder {
+    font-size: 14px;
+    color: white;
+    padding-left: 4px;
+}
+.CommentInput:focus {
+    padding-left: 5px;
+}
+.Button {
+    margin-left: 10px;
+    height: 37px;
+    align-items: center;
+    background-image: radial-gradient(100% 100% at 100% 0, #a568c6 0, #ae11dc 100%);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    font-size: 16px;
+}
+.Button:hover {
+    background-color: rgba(169, 39, 186, 0.72);
+    color: white;
+}
+.DisabledButton {
+    margin-left: 10px;
+    height: 35px;
+    align-items: center;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(105, 105, 112, 0.4) 0 2px 4px, rgba(86, 84, 89, 0.3) 0 7px 13px -3px, rgba(34, 37, 51, 0.5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #f1ebeb;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    font-size: 16px;
+    background-color: rgba(94, 94, 94, 0.35);
+}
+.DisabledButton:hover {
+    cursor: not-allowed;
+
+}
+.HorizontalLine {
+    margin: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(169, 39, 186, 0.34);
+}
+.HorizontalLine:last-child {
+    width: 0;
+    height: 0;
+}
+.Comment div > p:first-child {
+    margin-right: 5px;
+}
+.Button:hover {
+    background-image: radial-gradient(100% 100% at 100% 0, #a73cdd 0, #8631a1 100%);
+}
+

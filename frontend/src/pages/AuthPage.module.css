@@ -1,0 +1,6 @@
+.Container {
+    background: linear-gradient(135deg, #a927ba 0%, #bd414f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

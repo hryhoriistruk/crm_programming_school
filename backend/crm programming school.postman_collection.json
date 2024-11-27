@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "fcd575e4-c90d-41f1-b8b6-6ad2811fc9a1",
+		"name": "crm programming school",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25931697"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"admin\",\r\n    \"deviceId\":\"3223-3453-4vb5-v34v\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:4000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiTUFOQUdFUiIsIm1hbmFnZXJfaWQiOjIsImRldmljZUlkIjoiREVMTCIsImlhdCI6MTcyOTQzODM5MywiZXhwIjoxNzI5NTI0NzkzfQ.OKqBtj0ABMXLjjwXppyOmEEkKOZ4r8AxYZFxwyo2qMA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://0.0.0.0:4000/auth/refresh"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiTUFOQUdFUiIsIm1hbmFnZXJfaWQiOjIsImRldmljZUlkIjoiREVMTCIsImlhdCI6MTcyOTQzODY4NCwiZXhwIjoxNzI5NDc0Njg0fQ.if0DQrWygqrLvObACFEmjQTD4BY2xY9a9wSFStOb5nI"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://0.0.0.0:4000/auth/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "register manager",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\":\"anya@gmail.com\",\r\n     \"name\": \"Anna\",\r\n     \"surname\": \"Korsun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:4000/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "activate manager",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://0.0.0.0:4000/auth/activate/7"
+			},
+			"response": []
+		},
+		{
+			"name": "new password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYW5hZ2VyX2lkIjo3LCJpYXQiOjE3Mjk0MzkxMjksImV4cCI6MTcyOTQ0MDkyOX0.nnjbFWY7i0szBtj40Jd7WF9Y-RmZR3kLYEwuDiHNkrk"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"P@ssword1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:4000/auth/activate-manager"
+			},
+			"response": []
+		},
+		{
+			"name": "recovery password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTMyNDc3NiwiZXhwIjoxNzI5MzYwNzc2fQ.P0AuP1aasBzmwEtlD0uQqQmj9tTbRYk4Mc-WVZVQUMU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://0.0.0.0:4000/auth/recovery-password/2"
+			},
+			"response": []
+		},
+		{
+			"name": "set recovery password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYW5hZ2VyX2lkIjoiMiIsImlhdCI6MTcyOTMzNjM5NCwiZXhwIjoxNzI5MzM4MTk0fQ.LJCZCsulxDmFI6CR5vVX5vvJStX4qaKUuaeicTDcKBM"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"P@ssword11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:4000/auth/recovery-password"
+			},
+			"response": []
+		},
+		{
+			"name": "ban manager",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": "http://0.0.0.0:4000/auth/ban/2"
+			},
+			"response": []
+		},
+		{
+			"name": "unban manager",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": "http://0.0.0.0:4000/auth/unban/2"
+			},
+			"response": []
+		},
+		{
+			"name": "me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiTUFOQUdFUiIsIm1hbmFnZXJfaWQiOjIsImRldmljZUlkIjoiREVMTCIsImlhdCI6MTcyOTQzOTQ0MSwiZXhwIjoxNzI5NDc1NDQxfQ.KHIeP4eM2kEm7uqU_kABXw1fkQQTIrtXE0ejCfDBg8w"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:4000/managers/me"
+			},
+			"response": []
+		},
+		{
+			"name": "managers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:4000/managers",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"managers"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "anna",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6IjExMTEtZmhoZy01NHQ0IiwiaWF0IjoxNzI0ODUzNzM4LCJleHAiOjE3MjQ4ODk3Mzh9.3V0we1NDU5eBQ-8kxAU3i2ZJK9c9jF27h6wCXcyv7rc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:4000/orders?page=13&order=-email",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "13"
+						},
+						{
+							"key": "order",
+							"value": "-email"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"paid 200eur\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:4000/orders/5/addComment"
+			},
+			"response": []
+		},
+		{
+			"name": "groups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:4000/orders/groups"
+			},
+			"response": []
+		},
+		{
+			"name": "group",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sept-2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:4000/orders/groups"
+			},
+			"response": []
+		},
+		{
+			"name": "statuses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:4000/orders/statuses"
+			},
+			"response": []
+		},
+		{
+			"name": "courses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:4000/orders/courses"
+			},
+			"response": []
+		},
+		{
+			"name": "course-formats",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:4000/orders/course-formats"
+			},
+			"response": []
+		},
+		{
+			"name": "course types",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:4000/orders/course-types"
+			},
+			"response": []
+		},
+		{
+			"name": "order by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n        \r\n            \"group_id\": 1,\r\n            \"name\": null,\r\n            \"surname\": null,\r\n            \"age\": null,\r\n            \"sum\": \"500\",\r\n            \"alreadyPaid\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:4000/orders/5"
+			},
+			"response": []
+		},
+		{
+			"name": "download report",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJtYW5hZ2VyX2lkIjoxLCJkZXZpY2VJZCI6ImlwaG9uZSIsImlhdCI6MTcyOTQzODMzMywiZXhwIjoxNzI5NDc0MzMzfQ.jcj2iSFhGjVRP30AyUPT4ryoalwkW0TUnY7eHByFxHk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:4000/orders/download?order=id",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "4000",
+					"path": [
+						"orders",
+						"download"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "id"
+						},
+						{
+							"key": "manager",
+							"value": "tan",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
